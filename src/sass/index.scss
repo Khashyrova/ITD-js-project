@@ -1,0 +1,14 @@
+@import './utils/variables';
+@import './utils/mixin';
+@import './utils/common';
+@import './utils/container';
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/gallery';
+@import './layouts/footer';
+@import './layouts/modal-recipe';
+@import './layouts/pagination-btn';
+@import './layouts/modal-ingredient';
+@import './layouts/favorites';
+@import './layouts/mob-menu';

@@ -1,0 +1,178 @@
+.header{
+    &__logo{
+        font-size: 28px;
+        line-height: calc(24/28);
+        letter-spacing: 0.02em;
+        color: $accent-color;
+
+        text-transform: uppercase;
+    }
+    &__container{
+        align-items: center;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+    }
+    &__nav-list{
+        display: flex;
+        gap: 60px;
+        margin-left: 43px;
+
+    }
+    &__nav-link{
+        font-size: 18px;
+        line-height: calc(24/18);
+        letter-spacing: 0.02em;
+
+        color: var(--header-link);
+        transition: color $transition;
+        &:hover,
+        &:focus{
+            color: $accent-color;
+            fill: $accent-color;
+        }
+    }
+    &__search{
+        margin-left: 251px;
+        position: relative;
+    }
+    
+    &__input{
+        border: 1px solid $accent-color;
+        border-radius: 4px;
+        background-color: transparent;
+        color: var(--change-title);
+
+        padding: 8px;
+        padding-left: 48px;
+        height: 40px;
+        width: 288px;
+
+        font-size: 14px;
+        line-height: calc(24/14);
+        letter-spacing: 0.02em;
+        &::placeholder{
+            color: $medium-grey-color;
+            opacity: 0.4;
+        }
+    }
+    &__search-btn{
+        padding: 8px;
+        border-right: 1px solid $accent-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        height: 40px;
+    }
+    &__search-ico{
+        fill: $accent-color;
+    }
+    &__profile-btn{
+        margin-left: 80px;
+        color: $accent-color;
+        background-color: transparent;
+        height: 40px;
+    }
+    &__profile-ico{
+        fill: currentColor;
+    }
+    &__theme-box{
+        margin-left: 42px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    &__theme-text{
+        font-size: 18px;
+        line-height: calc(24/18);
+
+        color: $medium-grey-color;
+    }
+}
+.header__theme-list {
+   
+    display: none;
+    display: flex;
+    gap: 12px;
+}
+
+.header__theme-item {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;
+}
+
+.header__theme-light {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;
+    color: var(--change-btn-light);
+}
+
+.header__theme-dark {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;
+    color:var(--change-btn-dark);
+}
+
+.toggle-button {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    margin: 0;
+
+background-color: $white-color;
+    border: 0.6px solid $accent-color;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    transition: all 250ms cubic-bezier(.4, 0, .2, 1);
+}
+
+.toggle-button::after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 16px;
+    height: 16px;
+    background-color: $accent-color;
+    border-radius: 50%;
+
+    transform: translateX(0);
+
+    transition: all 250ms cubic-bezier(.4, 0, .2, 1);
+}
+
+.toggle-button:checked::after {
+    transform: translateX(calc(100% + 3px));
+background-color: $white-color;
+}
+
+.toggle-button:checked {
+    border: 0.6px solid $white-color;
+    background-color: $accent-color;
+}
+.dark-theme {
+    background-color:$title-light-color;
+
+    --header-link: #FCFCFC;
+    --change-btn-light: #FCFCFC;
+    --change-btn-dark: #FD5103;
+    --change-title: #FCFCFC;
+    --modal-text:#BDBDBD;
+    --modal-background:#202025;
+    --background:#202025;
+} 
+
+.profile_img{
+    border-radius: 50%;
+}
